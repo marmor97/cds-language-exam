@@ -5,7 +5,7 @@ This assignment attempts to train a logistic regression that can distinguish bet
 
 ## Data
 
-Before you can access the data, you will need to create a kaggle API following the instructions here [https://github.com/Kaggle/kaggle-api#:~:text=To%20use%20the%20Kaggle%20API,file%20containing%20your%20API%20credentials]. When you have created an API and have a kaggle.json file, upload the file to worker02 if you are working there and move to the place the .json file is saved. When you are there you can execute the commands below:
+Before you can access the data, you will need to create a kaggle API following the instructions here https://github.com/Kaggle/kaggle-api#:~:text=To%20use%20the%20Kaggle%20API,file%20containing%20your%20API%20credentials. When you have created an API and have a kaggle.json file, upload the file to worker02 if you are working there and move to the place the .json file is saved. When you are there you can execute the commands below:
 
 ```
 mkdir ~/.kaggle/ # New folder 
@@ -60,11 +60,11 @@ When contrasting the two models with default hyper parameters and grid search pa
 Figure 1. Confusion matrix from model with gridsearch parameters (upper) and with default hyperparameters (lower).
 
 <p align="left">
-    <img src="../../../out/3/gridsearch_model_confusion_matrix.png" alt="Logo" width="400" height="400">
+    <img src="../../out/3/gridsearch_model_confusion_matrix.png" alt="Logo" width="400" height="400">
   <p>
 
 <p align="left">
-    <img src="../../../out/3/automatic_model_confusion_matrix.jpg" alt="Logo" width="400" height="400">
+    <img src="../../out/3/automatic_model_confusion_matrix.jpg" alt="Logo" width="400" height="400">
   <p>
 
 Looking at informative features, which are printed in the terminal, a couple of results need attention. We see that of most informative words are "suicide" and "depressed", respectively. It is not surprising as these are very direct indicators and one could wonder how good a classification would perform if these are not included in the corpus. Further work should include this test. Otherwise, elements seem more negative in the suicide indicative features with words such as "pain", "death" and "end" compared to features as "sleep", "college" and "friends". Note that the features are not calculated on the cross-validated model. Future development of the model should also find a way to see the informative cross-validated features. One could for example choose features that appear in > 0.5 x number of folds.

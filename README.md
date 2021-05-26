@@ -23,50 +23,34 @@ This portfolio consists of 5 projects - 4 class assignments made throughout the 
 
 ## :file_folder: Structure
 
-To familiarize yourself with the structure of the repository, please see the table below that describes the main folders: 
+To familiarize yourself with the structure of the repository, please see the table below that describes the main folders. Each assignment script, data and output is saved in the folder with the number corresponding to it: 
     
 ```bash
 
 language-analytics-exam/  
 
-├── src/  # Source scripts
-│   └── 1/
-│        └── sentiment.py
-│   └── 2/
-│        └── network.py
-│   └── 3/
-│        └── log_reddit.py
-│   └── 4/
-│        └── lr_got.py
-│        │
-│        └── cnn_got.py
-│   └── 5/
-│        └── philosophical_topics.py
+├── src/  # Source scripts 
+│   └── 1   
+│   └── 2 
+│   └── 3 
+│   └── 4 
+│   └── 5 
 │    
 ├── data/  # Data 
-│   └── 1/   
-│   │ 
-│   └── 2/ 
-│   │ 
-│   └── 3/ 
-│   │ 
-│   └── 4/ 
-│   │ 
-│   └── 5/ 
+│   └── 1   
+│   └── 2 
+│   └── 3 
+│   └── 4 
+│   └── 5 
 │
 ├── out/  # Output files
-│   └── 1/
-│   │ 
-│   └── 2/
-│   │ 
-│   └── 3/
-│   │ 
-│   └── 4/
-│   │ 
-│   └── 5/
+│   └── 1
+│   └── 2
+│   └── 3
+│   └── 4
+│   └── 5
 │
 ├── utils/  # Utility functions 
-│   │
 │   └── *.py
 │
 ├── examples/ # Pictures etc. used in readme

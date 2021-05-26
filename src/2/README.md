@@ -1,7 +1,7 @@
 ## Assignment description: 
 ### Assignment 4
 Creating reusable network analysis pipeline
-This assignment attempts to create a network pipeline as a reusable command-line tool. This command-line tool will take a given dataset and perform simple network analysis. In particular, it will build networks based on entities appearing together in the same documents to see what interactions appear and uses neuralcoref to avoid duplicates of entities. It builds upon work done in class which is found here [https://github.com/CDS-AU-DK/cds-language/blob/main/notebooks/session6.ipynb]. 
+This assignment attempts to create a network pipeline as a reusable command-line tool. This command-line tool will take a given dataset and perform simple network analysis. In particular, it will build networks based on entities appearing together in the same documents to see what interactions appear and uses neuralcoref to avoid duplicates of entities. It builds upon work done in class which is found here https://github.com/CDS-AU-DK/cds-language/blob/main/notebooks/session6.ipynb. 
 
 ## Data:
 

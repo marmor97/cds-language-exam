@@ -197,11 +197,12 @@ class ReligiousTP:
         '''        
         print("[INFO] Building LDA model...")
 
-        if self.args['num_topics'] is not None:
-            self.num_topics = self.args['num_topics']
-        else:
+        # Taking optimal topics from the calculation above if metric is specified
+        if args['metric'] is not None:
             self.num_topics = self.optimal_topics
-
+        else:
+            self.num_topics = self.args['num_topics']
+           
         # Build LDA model
         self.lda_model = gensim.models.LdaMulticore(corpus=corpus,    #vectorized corpus - list of lists of tuples
                                        id2word=id2word,  #gensim dict - mapping word to IDS
@@ -271,44 +272,48 @@ class ReligiousTP:
         '''
         Generates and saves plot of word weight and occurrences in each topic
         '''
-        # Collect topics
-        topics = self.lda_model.show_topics(formatted=False)
-        data_flat = [w for w_list in text_processed for w in w_list]
-        counter = Counter(data_flat)
         
-        out = []
-        
-        # Count occurrence of word and its weight in topic
-        for i, topic in topics:
-            for word, weight in topic:
-                out.append([word, i , weight, counter[word]])
-                
-        df = pd.DataFrame(out, columns=['word', 'topic_id', 'importance', 'word_count'])        
-        
-        # Plot
-        fig, axes = plt.subplots(self.num_topics, 1, figsize=(16,20), sharey=True, dpi=160)
-        # Colors
-        cols = [color for name, color in mcolors.BASE_COLORS.items()]
-        
-        # Take every subplot 
-        for i, ax in enumerate(axes.flatten()):
-            ax.bar(x='word', height="word_count", data=df.loc[df.topic_id==i, :], color=cols[i], width=0.5, alpha=0.3, label='Word Count')
-            ax_twin = ax.twinx()
-            ax_twin.bar(x='word', height="importance", data=df.loc[df.topic_id==i, :], color=cols[i], width=0.2, label='Weights')
-            ax.set_ylabel('Word Count', color=cols[i])
-            ax.set_title('Topic: ' + str(i), color=cols[i], fontsize=16)
-            ax.tick_params(axis='y', left=False)
-            ax.set_xticklabels(df.loc[df.topic_id==i, 'word'], rotation=30, horizontalalignment= 'right')
-            ax.legend(bbox_to_anchor=(1, 0.9)); ax_twin.legend(loc='upper right')
-        
-        # Define layout
-        fig.tight_layout(w_pad=2)    
-        fig.suptitle('Word Count and Importance of Topic Keywords', fontsize=22, y=1.05) # Save figure
-        plt.savefig(os.path.join(self.args['outpath'],f"{self.basename}_word_weight_occurrence.png"))
-        plt.show()
-        
-        print(f"[INFO] Figure with topics and keywords is saved in {self.args['outpath']} as {self.basename}_word_weight_occurrence.png")
-                             
+        # Cannot plot below 8 topics because of too few colors
+        if self.num_topics < 8:
+            # Collect topics
+            topics = self.lda_model.show_topics(formatted=False)
+            data_flat = [w for w_list in text_processed for w in w_list]
+            counter = Counter(data_flat)
+
+            out = []
+
+            # Count occurrence of word and its weight in topic
+            for i, topic in topics:
+                for word, weight in topic:
+                    out.append([word, i , weight, counter[word]])
+
+            df = pd.DataFrame(out, columns=['word', 'topic_id', 'importance', 'word_count'])        
+
+            # Plot
+            fig, axes = plt.subplots(self.num_topics, 1, figsize=(16,20), sharey=True, dpi=160)
+            
+            # Colors
+            cols = [color for name, color in mcolors.BASE_COLORS.items()]
+
+            # Take every subplot 
+            for i, ax in enumerate(axes.flatten()):
+                ax.bar(x='word', height="word_count", data=df.loc[df.topic_id==i, :], color=cols[i], width=0.5, alpha=0.3, label='Word Count')
+                ax_twin = ax.twinx()
+                ax_twin.bar(x='word', height="importance", data=df.loc[df.topic_id==i, :], color=cols[i], width=0.2, label='Weights')
+                ax.set_ylabel('Word Count', color=cols[i])
+                ax.set_title('Topic: ' + str(i), color=cols[i], fontsize=16)
+                ax.tick_params(axis='y', left=False)
+                ax.set_xticklabels(df.loc[df.topic_id==i, 'word'], rotation=30, horizontalalignment= 'right')
+                ax.legend(bbox_to_anchor=(1, 0.9)); ax_twin.legend(loc='upper right')
+
+            # Define layout
+            fig.tight_layout(w_pad=2)    
+            fig.suptitle('Word Count and Importance of Topic Keywords', fontsize=22, y=1.05) # Save figure
+            plt.savefig(os.path.join(self.args['outpath'],f"{self.basename}_word_weight_occurrence.png"))
+            plt.show()
+
+            print(f"[INFO] Figure with topics and keywords is saved in {self.args['outpath']} as {self.basename}_word_weight_occurrence.png")
+
                              
 def main():
     

@@ -10,9 +10,11 @@ We have downloaded a data set containing 5 religious and philosophical texts tak
 - The Gospel of Buddha (filename 35895-0.txt)
 - Meditations, by Marcus Aurelius (filename pg2680.txt)
 
+## Collaboration
+This project was made in collaboration with Frida Hæstrup. The work has been equally split. Apart from being the other brain of the idea of the pipeline and participating in project discussions, Frida contributed with modifications in bigram, trigram, corpus and dictionary functions as well as parameter tuning and plotting. Methods and results were also written in collaboration. 
 
 ## Data
-Before you can access the data, you will need to create a kaggle API following the instructions here [https://github.com/Kaggle/kaggle-api#:~:text=To%20use%20the%20Kaggle%20API,file%20containing%20your%20API%20credentials]. When you have created an API and have a kaggle.json file, upload the file to worker02 if you are working there and move to the place the .json file is saved. When you are there you can execute the commands below:
+Before you can access the data, you will need to create a kaggle API following the instructions here https://github.com/Kaggle/kaggle-api#:~:text=To%20use%20the%20Kaggle%20API,file%20containing%20your%20API%20credentials. When you have created an API and have a kaggle.json file, upload the file to worker02 if you are working there and move to the place the .json file is saved. When you are there you can execute the commands below:
 
 ```
 mkdir ~/.kaggle/ # New folder 
@@ -23,14 +25,18 @@ Now you can download the data directly from your terminal by moving to the folde
 ```
 # When you are at the 'start' of my repository (i.e. cds-language-exam) you can type
 
-cd data/5 # Changing directory 
+cd data
+
+mkdir 5
+
+cd 5 # Changing directory 
 
 kaggle datasets download -d  tentotheminus9/religious-and-philosophical-texts # Download data
 
 unzip religious-and-philosophical-texts.zip # Unzip data
 ```
 
-If you want to manually download the data, find it here: [https://www.kaggle.com/tentotheminus9/religious-and-philosophical-texts]
+If you want to manually download the data, find it here: https://www.kaggle.com/tentotheminus9/religious-and-philosophical-texts
 
 N.B.: If you do not download the data at this location, please change the input path in the commandline argument so that the script knows where to find the input data.
 
@@ -67,7 +73,7 @@ All results can be found in ```out/5```. Here, I will only highlight a subset of
 
 
 <p align="left">
-    <img src="../../../out/3/pg10_word_weight_occurrence.png" alt="Logo" width="400" height="600">
+    <img src="../../out/3/pg10_word_weight_occurrence.png" alt="Logo" width="400" height="600">
   <p>
 
 Within this plot, there are multiple things to consider. Firstly, we see that the word occurrences and weights align in most cases. Only a few times such as in topic 4 and 'son', the word occurs much more than it is weighted whereas with 'daughter' the opposite pattern is seen. I a couple of topics such as 2 and 3, the first keywords are highly occurring and important and the rest of the words have very small weights. This could indicate that the robustness of this topic isn't high when it only relies on a single word. 
@@ -79,10 +85,7 @@ Also, a few general issues arise when attempting to extract meaningful informati
 Another thought to consider is whether many of the same words (such as man, goat, wine, son) are used repeatedly but to express different themes in a metaphorical way. If this is the case, it would require more close readings of the texts. It is probably a different case for other text sources such as religious disussions on Reddit, with which studies have been successful at mapping topics and their differences(Stinea, Deitrick & Agarwala, 2020).
 
 Combining this type of distant and close reading in topic modelling can in some cases yield very strong results, however, in this case it seems to require more time and expertise to extract meaningful topics and elements of each religious text. Despite this, we have developed a script and pipeline that can, with quite few modifications, be applied to new texts.
-
-
-## Collaboration
-This project was made in collaboration with Frida Hæstrup. The work has been equally split. Apart from being the other brain of the idea of the pipeline and participating in project discussions, Frida contributed with modifications in bigram, trigram, corpus and dictionary functions as well as parameter tuning and plotting. Methods and results were also written in collaboration.     
+    
 
 
 ## References
