@@ -45,13 +45,13 @@ unzip -q glove.6B.zip # Unzip
 
 ### Commandline arguments
 #### Logistic Regression
-    
+```  
  - "-f", "--filename", type=str, default= "../../../data/Game_of_Thrones_Script.csv", help="str, file name and location"    
  
  - "-o", "--outpath", type=str, default= "./../../out/4"), help="str, output location"
-
+```
 #### Convolutional Neural Network
-
+```
 -  "-p", "--preprocess", required=False, choices = "add_character", "collapse_character", type=str, default= "add_character", help="preprocess method of sentences: add_character adds name of character in every sentence, collapse_character groups by character and episode and combine all sentences in one row per character"
 
 - "-f", "--filename", required=False, type=str, default= "../../../data/4/Game_of_Thrones_Script.csv", help="str, file name and location"
@@ -61,7 +61,7 @@ unzip -q glove.6B.zip # Unzip
 - "-o", "--outpath", required=False, type=str, default= ../../../out/4, help="str, output location"
 
 - "-ed", "--embed_dim", required=False, type=int, choices = 50,100,200,300, default=50, help="int, glove embeddings size" 
-
+```
 To run the script, please type: 
 
 ```

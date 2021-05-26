@@ -42,7 +42,7 @@ N.B.: If you do not download the data at this location, please change the input 
 
 ## Run script
 ### Commandline arguments
-
+```
 - "-f", "--filename", required=False, type=str, default= "../data/pg10.txt", help="str, filename for txt file"
                              
 - "-o", "--outpath", required=False, type=str, default= os.path.join("..","out"), help="str, folder for output files"
@@ -50,7 +50,7 @@ N.B.: If you do not download the data at this location, please change the input 
 - "-m", "--metric", required=False, default = "coherence", choices = ["coherence", "perplexity"],type=str, help="str, method to approximate number of topics with"
 
 - "-n", "--num_topics", required=False, type=int, default = 5, help="int or none, number of topics to model"
-
+```
 To run the script, please type the following in the terminal:
 
 ```

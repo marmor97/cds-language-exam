@@ -31,12 +31,13 @@ N.B.: The user who uploaded the suicide-watch data set has within the last days 
 
 ## Run script
 ### Commandline arguments
+```
 - "-f","--filename", required=False, type=str, default= "../../../data/3/Suicide_Detection.csv", help="str, filename for dataset name and location"
 
 - "-c", "--condition", required=False, choices = ["gridsearch", "automatic"], type=str, default= "gridsearch", help="str, gridsearch to find parameters or not"   
 
 - "-o", "--outpath", required=False, type=str,  default= "../../../out/3/", help="str, filename for dataset name and location"
-
+```
 Run the models with and without gridsearch by typing:
 
 ```

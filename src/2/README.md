@@ -39,7 +39,7 @@ pip install -e.
    required=False, 
    type = int, 
    default = 500, 
-   help = "int of threshold weights")
+   help = "int of threshold weights"
     
 - "-o","--outpath", 
    required=False,

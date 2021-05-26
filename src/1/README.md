@@ -12,9 +12,9 @@ To run the script, you will need to download Spacy and the small web model. Plea
 source lang101_marie/bin/activate
 python -m spacy download en_core_web_sm
 ```
-
-## Commandline arguments:
-
+## Run script
+### Commandline arguments:
+```
 - "--path", "-p", default = "../../data/1/abc_data/abcnews-date-text.csv"
     
 - "--rolling_means", "-r", default = "7 30"
@@ -22,7 +22,7 @@ python -m spacy download en_core_web_sm
 - "--outpath", "-o", default =../../out/1
 
 - "--sample", "-s", default = 10000
-
+```
 To run the script please go to the terminal and type:
 
 ```
