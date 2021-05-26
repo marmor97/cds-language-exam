@@ -68,11 +68,11 @@ To develop the network, a class was initiated containing various functions. Firs
 ## Results:
 
 All results can be found in ```out/2```.
-Below is a figure of the resulting network that was created in the script:
+Below is a figure of the resulting network that was created in the script. First, a picture of the entire network is shown and afterwards, a zoom of the network is included:
 
 <p align="left">
   <a href="https://github.com/marmor97/cds-language-exam">
-    <img src="../../out/2/network.png" alt="Logo" width="600" height="600">
+    <img src="../../out/2/network.png" alt="Logo" width="500" height="500">
   </a>
     
 <p align="left">
