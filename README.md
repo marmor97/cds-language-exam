@@ -18,7 +18,7 @@ This portfolio consists of 5 projects - 4 class assignments made throughout the 
 | 2 | Network analysis |
 | 3 | Classifying sub-reddits of depression and suicide |
 | 4 | Classifying seasons of Game of Thrones with Convolutional Neural Networks |
-| 5 | Self-assigned project |
+| 5 | Self-assigned project - Topic modelling of religious texts |
     
 
 ## :file_folder: Structure

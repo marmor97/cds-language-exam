@@ -1,4 +1,4 @@
-## Final project 
+## Final project - Topic modelling of religious texts
 ### Assignment description: 
  
 This project aims at distinguishing the topics and themes occuring in five religious and philosophical texts using Topic Modelling with Gensim. 
