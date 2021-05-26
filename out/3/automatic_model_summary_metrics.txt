@@ -1,0 +1,1 @@
+The mean f1-score in a 10-fold cv is 0.897 with a std of 0.003

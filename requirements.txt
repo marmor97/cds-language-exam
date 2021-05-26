@@ -1,0 +1,21 @@
+wheel
+pandas==1.1.5
+numpy==1.19.4
+spacy==2.3.5
+# spacy-legacy==3.0.1
+spacytextblob==0.1.7
+pathlib
+argparse
+opencv-python
+sklearn
+matplotlib
+seaborn
+tensorflow
+keras
+networkx==2.5
+pygraphviz==1.6
+scipy
+tqdm
+neuralcoref
+nltk
+gensim
