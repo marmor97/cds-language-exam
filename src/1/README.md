@@ -39,7 +39,7 @@ To calculate and plot polarity, a class containing two main functions is defined
 All results can be found in the folder out/1. Below is an attachment of the plot with a rolling mean of 7 and 30:
 
 <p align="left">
-    <img src="../../out/1/polarity_plot.png" alt="Logo" width="400" height="200">
+    <img src="../../out/1/polarity_plot.png" alt="Logo" width="600" height="400">
   </p>
 
 Though the plots use the same data of polarity the way they are averaged make a difference. In the plot with a rolling mean of seven days, more shifts are seen and local changes in polarity are detected. The monthly rolling mean is more steadily increasing and does not have large fluctuations. Therefore, if more nuanced shifts is the point of interest, one should decrease the rolling mean. With regards to the two rule or dictionary-based methods, SpacyTextBlob and Vader, we can highlight different points. Both follow the same pattern mentioned above, but in general, Vader polarity means are lower than SpacyTextblob. On the other hand, it has larger fluctuations. Further work should include a test of other approaches such as deep
