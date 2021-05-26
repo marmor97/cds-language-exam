@@ -28,7 +28,7 @@ pip install -e.
 ```
 
 ## Commandline tools:
-
+```
 - "-e","--edgelist_name",
   required=False, 
   type = str, 
@@ -46,7 +46,7 @@ pip install -e.
    type = str, 
    default = os.path.join("out")
    help = "str of output path"
-
+```
 Run the scripts by typing:
 
 ```
