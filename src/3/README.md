@@ -64,7 +64,7 @@ Figure 1. Confusion matrix from model with gridsearch parameters (upper) and wit
     <img src="../../out/3/gridsearch_model_confusion_matrix.png" alt="Logo" width="400" height="400">
   <p>
 
-<p align="right">
+<p align="left">
     <img src="../../out/3/automatic_model_confusion_matrix.png" alt="Logo" width="400" height="400">
   <p>
 
