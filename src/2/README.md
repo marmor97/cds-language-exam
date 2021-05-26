@@ -72,7 +72,7 @@ Below is a figure of the resulting network that was created in the script:
 
 <p align="left">
   <a href="https://github.com/marmor97/cds-language-exam">
-    <img src="../../out/2/network.png" alt="Logo" width="600" height="600">
+    <img src="../../out/2/network.png" alt="Logo" width="800" height="800">
   </a>
 
 We see that there has successfully built a network and a dataframe of eigenvector and betweenness values. An immediate impression that the network gives is that Hillary Clinton seems to be a highly occuring and connected entity whereas those she is connected to are not necessarily connected to each other. Looking at the centrality measures confirms this impression as we see that "Clinton" has an eigenvector of 0.54 and a betweenness of 0.73. However, what should also be highlighted is that the entity Clinton occurs in multiple entities (e.g. as Hillary, Hillary Clinton and Clintons) although it should probably be the same. This has probably affected the network and centrality measures.  
