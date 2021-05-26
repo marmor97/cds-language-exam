@@ -73,7 +73,7 @@ All results can be found in ```out/5```. Here, I will only highlight a subset of
 
 
 <p align="left">
-    <img src="../../out/3/pg10_word_weight_occurrence.png" alt="Logo" width="400" height="600">
+    <img src="../../out/5/pg10_word_weight_occurrence.png" alt="Logo" width="400" height="600">
   <p>
 
 Within this plot, there are multiple things to consider. Firstly, we see that the word occurrences and weights align in most cases. Only a few times such as in topic 4 and 'son', the word occurs much more than it is weighted whereas with 'daughter' the opposite pattern is seen. I a couple of topics such as 2 and 3, the first keywords are highly occurring and important and the rest of the words have very small weights. This could indicate that the robustness of this topic isn't high when it only relies on a single word. 
