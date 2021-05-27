@@ -25,11 +25,7 @@ Now you can download the data directly from your terminal by moving to the folde
 ```
 # When you are at the 'start' of my repository (i.e. cds-language-exam) you can type
 
-cd data
-
-mkdir 5
-
-cd 5 # Changing directory 
+cd data/5 # Changing directory 
 
 kaggle datasets download -d  tentotheminus9/religious-and-philosophical-texts # Download data
 
